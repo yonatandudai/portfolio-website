@@ -316,6 +316,22 @@ section {
   color: #fff;
 }
 
+.send-again-button {
+  margin-top: 20px; /* Adjust this value to control spacing */
+  background-color: #7600bc; /* Match other button styling */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-again-button:hover {
+  background-color: #5a0093;
+}
+
 /* Footer */
 footer {
   background-color: #333;

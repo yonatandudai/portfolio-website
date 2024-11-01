@@ -24,7 +24,7 @@ function Contact() {
       if (response.ok) {
         setStatus('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' }); // Clear the form
-        setIsSubmitted(true); // Hide form after successful submission
+        setIsSubmitted(true); // Show thank-you message after successful submission
       } else {
         setStatus('Failed to send message.');
       }
@@ -33,15 +33,21 @@ function Contact() {
     }
   };
 
+  const handleResetForm = () => {
+    setIsSubmitted(false);
+    setStatus(''); // Clear the status message
+  };
+
   // Display a thank-you message if the form has been submitted
   if (isSubmitted) {
     return (
       <section id="contact" className="contact">
-        <p>Thank you for reaching out! We’ll get back to you shortly.</p>
-        <button onClick={() => setIsSubmitted(false)}>Send another message</button>
+        <p>Thank you for reaching out! I’ll get back to you shortly.</p>
+        <button onClick={handleResetForm} className="send-again-button">Send another message</button>
       </section>
     );
   }
+  
 
   return (
     <section id="contact" className="contact">

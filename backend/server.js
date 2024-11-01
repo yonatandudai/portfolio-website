@@ -4,30 +4,34 @@ const cors = require('cors');
 const sgMail = require('@sendgrid/mail'); // Import SendGrid
 const app = express();
 
-app.use(cors());
+// Allow requests from your Netlify domain
+const corsOptions = {
+  origin: ['https://yonatandu-portfolio.netlify.app', 'http://localhost:3000']
+};
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // Set up SendGrid API key
-sgMail.setApiKey(process.env.SENDGRID_API_KEY); // Use environment variable for security
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Endpoint for handling contact form submissions
 app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
-  // Set up email data
   const msg = {
-    to: 'yonatandudai@gmail.com', // Your email address to receive messages
-    from: 'yonatandu@outlook.com', // Must be a verified sender in SendGrid
-    replyTo: email, // This can be any email provided by the user
+    to: 'yonatandudai@gmail.com',
+    from: 'yonatandu@outlook.com',
+    replyTo: email,
     subject: `New message from ${name}`,
     text: message,
   };
   
   try {
-    await sgMail.send(msg); // Send the email using SendGrid
+    await sgMail.send(msg);
     res.status(200).send('Message sent successfully!');
   } catch (error) {
-    console.error("Error sending email:", error); // Logs error details
+    console.error("Error sending email:", error);
     res.status(500).send('Failed to send message.');
   }
 });
