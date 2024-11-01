@@ -1,0 +1,378 @@
+/* Global Styles */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #1c00bc;
+  padding: 2cm 1cm;
+}
+
+nav .topmenu a {
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav .topmenu a:hover {
+  color: lightgray;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+nav .profile_name {
+  float: left;
+  color: lightcoral;
+  font-size: 30px;
+}
+
+.profile_name .contact_info {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact_info img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+/* Section Titles */
+h1, h2, h3 {
+  text-align: left;
+  color: #0051bc;
+  margin: 0 0 10px 20px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.introduction {
+  font-size: 30px;
+  text-align: left;
+  margin: 30px 60px 20px;
+  animation-duration: 5s;
+  position: relative;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+#about h1 {
+  font-size: 50px;
+  color: #0051bc;
+  margin-bottom: 10px;
+}
+
+#about p {
+  font-size: 18px;
+  color: rgb(128, 128, 128);
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.profile_image {
+  width: 250px;
+  height: auto;
+  margin: 0 0 10px 20px;
+}
+
+/* General Section Styling for Consistent Alignment */
+section {
+  margin: 20px 60px;
+  padding: 20px;
+}
+
+/* Education Section */
+#education {
+  padding-left: 20px;
+}
+
+#education h2 {
+  font-size: 50px;
+  color: #0051bc;
+  margin: 0 0 10px 0;
+}
+
+#education .education-content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Experience Section */
+#experience {
+  padding-left: 20px;
+}
+
+#experience .experience-item h3 {
+  font-size: 25px;
+  color: #0051bc;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+#experience .experience-item p,
+#experience .experience-item ul {
+  font-size: 18px;
+  color: gray;
+  margin-left: 20px;
+}
+
+/* Military Service Section */
+#military-service {
+  padding-left: 20px;
+}
+
+#military-service h2 {
+  font-size: 50px;
+  color: #0051bc;
+  margin: 0 0 10px 0;
+}
+
+#military-service .military-service-content {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Skills */
+.all_skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+}
+
+.skill {
+  border: 1px solid gray;
+  border-radius: 6px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  width: 150px;
+  font-size: 20px;
+  box-shadow: 0 3px 10px gray;
+}
+
+.skill img {
+  height: 35px;
+}
+
+.skill h6 {
+  font-size: 20px;
+  margin-block-start: 8px;
+  margin-block-end: 5px;
+  font-weight: bold;
+}
+
+.skill p {
+  font-size: 15px;
+  color: gray;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+}
+
+/* Projects Section */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 60px;
+  padding-left: 20px;
+}
+
+.project-card {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.project-card h3 {
+  font-size: 25px;
+  color: #0051bc;
+  margin: 0;
+}
+
+.project-card p,
+.project-card li {
+  font-size: 20px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Contact Section Styling */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.contact form {
+  width: 60%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.contact fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact legend {
+  font-size: 24px;
+  color: #0051bc;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-button {
+  background-color: #7600bc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #5a0093;
+}
+
+.popup {
+  width: 400px;
+  background-color: #e8bcf0;
+  border-radius: 3mm;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  display: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.popup h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.popup button {
+  background-color: #fff;
+  border: 1px solid #7600bc;
+  color: #7600bc;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #7600bc;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll to Top Button */
+.iconbutton {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: #7600bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+/* Mobile (max width 768px) */
+@media (max-width: 768px) {
+  nav .topmenu a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile_image {
+    width: 150px;
+    margin: 10px auto;
+  }
+
+  .all_skills, .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill, .project-card {
+    width: 90%;
+    margin: 20px 0;
+  }
+}
