@@ -1,1 +1,22 @@
-sendgrid.env
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database and session data
+*.sqlite
+*.sqlite3
+*.db
+sessions/
+
+# System files
+.DS_Store
+Thumbs.db

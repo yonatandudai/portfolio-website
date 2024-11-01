@@ -1,6 +1,20 @@
-# Ignore environment files
+# Node modules
+node_modules/
+
+# Environment variables
 .env
 
-# Ignore node modules
-backend/node_modules/
-frontend/node_modules/
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Netlify or Vercel build outputs
+netlify/
+.vercel/
