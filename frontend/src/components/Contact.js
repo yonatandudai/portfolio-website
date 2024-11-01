@@ -11,8 +11,12 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Use the API URL from environment variables
+    const API_URL = `${process.env.REACT_APP_API_URL}/api/contact`;
+
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -34,6 +38,7 @@ function Contact() {
     return (
       <section id="contact" className="contact">
         <p>Thank you for reaching out! We’ll get back to you shortly.</p>
+        <button onClick={() => setIsSubmitted(false)}>Send another message</button>
       </section>
     );
   }
