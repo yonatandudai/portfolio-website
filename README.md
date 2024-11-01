@@ -33,7 +33,7 @@ This website is designed to present my work and skills in web development. It in
 
 ## Usage
 
-- Access the site at `http://localhost:3000`.  
+- Access the site at '[text](https://yonatandu-portfolio.netlify.app/)'.  
 - Use the contact form to send a message.
 
 ## Contact
