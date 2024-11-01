@@ -3,7 +3,7 @@ import React from 'react';
 function About() {
   return (
     <section id="about" className="container">
-      <img src="../assets/profile.jpg" alt="Profile" className="profile_image" />
+      <img src="../assets/profile.jpg" alt="Profile" className="profile_image"/>
       <div>
         <h1>Hi, my name is Yonatan Dudai 👋</h1>
         <p>

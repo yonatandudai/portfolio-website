@@ -23,7 +23,6 @@ app.post('/api/contact', async (req, res) => {
     text: message,
   };
   
-
   try {
     await sgMail.send(msg); // Send the email using SendGrid
     res.status(200).send('Message sent successfully!');
@@ -31,6 +30,15 @@ app.post('/api/contact', async (req, res) => {
     console.error("Error sending email:", error); // Logs error details
     res.status(500).send('Failed to send message.');
   }
+});
+
+// Centralized error handler
+app.use((err, req, res, next) => {
+  console.error("Error occurred:", err);
+  res.status(err.status || 500).json({
+    message: err.message || 'Internal Server Error',
+    error: process.env.NODE_ENV === 'development' ? err : {}
+  });
 });
 
 const PORT = process.env.PORT || 5000;
