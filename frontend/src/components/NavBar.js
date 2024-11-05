@@ -19,6 +19,7 @@ function NavBar() {
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="#footer" className="navbar-link">Links</a>
       </div>
     </nav>
   );
